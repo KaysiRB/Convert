@@ -2,7 +2,7 @@ import base64
 import json
 import os
 
-OUTPUT_DIR = "output\BBFAS"
+OUTPUT_DIR = r"src\output\BBFAS"
 
 def create_output_dir():
     """Create the output folder if it does not exist"""

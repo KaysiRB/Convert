@@ -28,7 +28,7 @@ CHERAX_TO_BBFAS_MAPPING = {
     "Right Wrist": ("pPi7", "pPt7"),   # Bracelets
 }
 
-OUTPUT_DIR = "output\BBFAS"
+OUTPUT_DIR = r"src\output\BBFAS"
 
 def create_output_dir():
     """Create the output folder if it does not exist"""
@@ -165,7 +165,7 @@ if __name__ == "__main__":
     elif not os.path.exists(file_path):
         print("❌ File not found!")
     else:
-        print("\nCharacter gender:")
+        print("\n👤 Code Character Gender:")
         print("1. FEMALE")
         print("2. MALE")
         

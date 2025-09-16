@@ -19,18 +19,17 @@ This project converts GTA V outfit codes between BBFAS and Cherax JSON. It provi
 ## Project Structure
 
 ```
-├── output/
-│   └── .gitkeep
-│   └── BBFAS
-│       └── .gitkeep
-│   └── CHERAX
-│       └── .gitkeep
 ├── src/
 │   ├── Modules/
 │   │   ├── BBFAS-JSON.py
 │   │   ├── CHERAX-BBFAS.py
 │   │   ├── JSON-CHERAX.py
 │   │   └── __init__.py
+│   ├── outupt/
+│   │   ├── BBFAS
+│   │   │    └── .gitkeep
+│   │   └── CHERAX
+│   │        └── .gitkeep
 │   ├── debug_main.py
 │   └── main.py
 ├── .gitignore

@@ -3,11 +3,12 @@ import sys
 
 try:
     import importlib.util
-    import sys
 
-    bbfas_json_path = os.path.join("Modules", "BBFAS-JSON.py")
-    json_cherax_path = os.path.join("Modules", "JSON-CHERAX.py") 
-    cherax_bbfas_path = os.path.join("Modules", "CHERAX-BBFAS.py")
+    # Always build paths relative to this file
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    bbfas_json_path = os.path.join(base_dir, "modules", "BBFAS-JSON.py")
+    json_cherax_path = os.path.join(base_dir, "modules", "JSON-CHERAX.py")
+    cherax_bbfas_path = os.path.join(base_dir, "modules", "CHERAX-BBFAS.py")
 
     spec1 = importlib.util.spec_from_file_location("bbfas_json", bbfas_json_path)
     bbfas_json_module = importlib.util.module_from_spec(spec1)
@@ -41,14 +42,14 @@ except (ImportError, FileNotFoundError, AttributeError) as e:
     print(f"❌ Import error : {e}")
     print("Make sure all files are in the correct structure:")
     print("📁 Required structure :")
+    print("📁 src/")
     print("   main.py")
-    print("   📁 Modules/")
+    print("   📁 modules/")
     print("      ├── BBFAS-JSON.py")
     print("      ├── JSON-CHERAX.py")
-    print("      ├── CHERAX-BBFAS.py")
-    print("      └── __init__.py (optional)")
+    print("      └── CHERAX-BBFAS.py")
     print(f"\n🔍 Current script file : {os.path.dirname(os.path.abspath(__file__))}")
-    print(f"🔍 Looking for modules in : {os.path.join(os.path.dirname(os.path.abspath(__file__)), 'Modules')}")
+    print(f"🔍 Looking for modules in : {os.path.join(os.path.dirname(os.path.abspath(__file__)), 'modules')}")
     sys.exit(1)
 
 def display_menu():

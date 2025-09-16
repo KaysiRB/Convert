@@ -1,33 +1,30 @@
 @echo off
-title Outfits converter
+title Outfits Converter Launcher
 
-REM Go to the folder of the .bat file
+REM Navigate to the folder of the .bat file
 cd /d "%~dp0"
 
 echo.
 echo ========================================
-echo    Outfits converter - Launcher
+echo       Outfits Converter - Launcher
 echo ========================================
-echo.
 echo Working directory : %cd%
 echo.
 
 REM Check if Python is installed
 python --version >nul 2>&1
 if errorlevel 1 (
-    echo Python is not installed or not in the PATH.
-    echo.
-    echo Please install Python from : https://python.org
+    echo [ERROR] Python is not installed or not in the PATH.
+    echo Please install Python from: https://www.python.org/downloads/
     echo.
     pause
     exit /b 1
 )
 
-REM Check if main.py exists
-if not exist "main.py" (
-    echo Main.py file not found in this folder.
-    echo.
-    echo Make sure this .bat file is in the same folder as main.py.
+REM Check if main.py exists in src\
+if not exist "src\main.py" (
+    echo [ERROR] main.py file not found in src\ directory.
+    echo Make sure this .bat file is in the root directory and main.py is in src\.
     echo.
     pause
     exit /b 1
@@ -36,9 +33,13 @@ if not exist "main.py" (
 REM Run the Python script
 echo Launching the converter...
 echo.
-python main.py
+python src\main.py
+if errorlevel 1 (
+    echo [ERROR] An error occurred while running main.py
+    echo Check your Python script for issues.
+    echo.
+)
 
-REM Pause at the end
 echo.
 echo ========================================
 pause

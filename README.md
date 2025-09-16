@@ -48,6 +48,7 @@ This project converts GTA V outfit codes between BBFAS and Cherax JSON. It provi
   ```sh
   run.bat
   ```
+- **OR:** run from the [src/](src/) folder in terminal main.py:
 
 ### 2. **Menu Options**
 

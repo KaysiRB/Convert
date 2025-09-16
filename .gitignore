@@ -1,2 +1,2 @@
-# Ignore
+# Ignore temporary files and build artifacts
 .TEMP/

@@ -234,7 +234,7 @@ def option_6():
 def main():
     """Main function"""
     print("🎮 Welcome to the outfits converter!")
-    print("📁 All generated files will be saved in the folder 'output/'")
+    print("📁 All generated files will be saved in the folder 'src/output/'")
 
     while True:
         display_menu()

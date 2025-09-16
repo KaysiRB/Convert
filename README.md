@@ -1,6 +1,6 @@
 # Outfits Converter
 
-This project converts GTA V outfit codes between BBFAS, JSON, and Cherax formats. It provides a menu-driven Python tool, conversion modules, templates, and debugging utilities.
+This project converts GTA V outfit codes between BBFAS and Cherax JSON. It provides a menu-driven Python tool, conversion modules.
 
 ---
 
@@ -134,13 +134,6 @@ All modules are in [Modules/](Modules):
 - If you see import errors, check that all files are in the correct structure.
 - Use [`debug_main.py`](debug_main.py) to inspect modules and verify function locations.
 - For Windows, ensure Python is installed and in your PATH.
-
----
-
-## Advanced Usage
-
-- You can run individual module scripts directly for standalone conversions.
-- Templates in `.TEMP/Template/` provide reference formats for BBFAS and Cherax.
 
 ---
 

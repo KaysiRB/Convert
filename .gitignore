@@ -1,0 +1,3 @@
+# Ignore temporary files and build artifacts
+.temp/
+.templates/
